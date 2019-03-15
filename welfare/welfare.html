@@ -16,7 +16,7 @@
     <body>
 
         <!-- card主体页面 -->
-        <div id="card">
+        <div id="card" >
             <!-- 图片页面detail -->
             <div class="detail">
                 <!-- 空白圆形circle -->
@@ -28,7 +28,7 @@
                             <!-- 仿mac window，红黄绿点依次对应 返回 防误触 刷新 功能 --> 
                             <i class="fa fa-circle " onclick="javascript:window.history.go(-1);" value="returnpage"></i>
  							<i class="fa fa-circle "></i>
-							 <i class="fa fa-circle " onclick="javascript:location.reload();" value="reloadpage"></i>
+							<i class="fa fa-circle " onclick="javascript:location.reload();" value="reloadpage"></i>
 
                         </div> <span class="title">支付宝公益项目</span>
 
@@ -68,11 +68,11 @@
                         </div>
                         <br>
                         <div class="col-6 love1">
-                            <div class="raise-love">💗爱心募集目标数量:
+                            <div class="raise-love"><i class="fa fa-heart text-danger" aria-hidden="true"></i> 爱心募集目标数量:
                                 <br/>  15,000,000</div>
                         </div>
                         <div class="col-6 love2">
-                            <div class="raise-love">💗已募集爱心数量:
+                            <div class="raise-love"><i class="fa fa-heart text-danger" aria-hidden="true"></i> 已募集爱心数量:
                                 <br/>  1,234,825</div>
                         </div>
                         <div class="col-12 progress-outside">
@@ -82,7 +82,7 @@
                             </div>
                         </div>
                         <div class="col-6 love3">
-                            <div class="raise-love ">💝累计献出爱心:
+                            <div class="raise-love "><i class="fa fa-heart text-danger" aria-hidden="true"></i> 累计献出爱心:
                                 <br/>  5600</div>
                         </div>
                         <div class="col-6 love4">
@@ -90,12 +90,19 @@
                                 <br/>  0.14份午餐</div>
                         </div>
                         <div class="col-12">
-                            <div class="more-love">获取更多爱心=>💕</div>
+                            <div class="more-love">获取更多爱心=> <br/> 
+                            	<button class="btn-love btn btn-warning">
+                            		<i class="fa fa-heart text-danger btn-love-i" aria-hidden="true"></i>
+                            	</button> 
+                            	
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
+
 
         <!-- footerguide 底部向导栏，跳转至其他页面/可组件化 -->
         <footer class="footer_guide">
@@ -109,10 +116,10 @@
 
             </div>
 
-            <a href="#" class="guide_item guide_item3 btn btn-warning btn " role="button"  aria-pressed="true">单人月捐</a>
+            <a href="#" class="guide_item guide_item3 btn btn-warning " role="button"  aria-pressed="true">单人月捐</a>
  
 
-            <a href="#" class="guide_item guide_item4 btn btn-danger btn " role="button" aria-pressed="true">单笔捐赠</a>
+            <a href="#" class="guide_item guide_item4 btn btn-danger " role="button" aria-pressed="true">单笔捐赠</a>
 
         </footer>
 
