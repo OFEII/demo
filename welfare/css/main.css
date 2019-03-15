@@ -1,7 +1,4 @@
-/**{
-  border: solid 1px #333; 
 
-}*/
 img
 {
  height: auto; width: auto\9; width:98%;
@@ -17,94 +14,7 @@ html,body{
 *, *::after, *::before {
   box-sizing: inherit;
 }
-.swiper-container {
-  top: -0.8em;
-  width: 100%;
-  height: 11.5em;
-}
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: rgba(127, 173, 173,0.8);
 
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-
-@-webkit-keyframes container {
-  0% {
-    perspective: 1000px;
-  }
-  100% {
-    perspective: 0px;
-  }
-}
-@-moz-keyframes container {
-  0% {
-    perspective: 1000px;
-  }
-  100% {
-    perspective: 0px;
-  }
-}
-@keyframes container {
-  0% {
-    perspective: 1000px;
-  }
-  100% {
-    perspective: 0px;
-  }
-}
-@-webkit-keyframes card {
-  0% {
-    -webkit-transform: rotateX(60deg) rotateY(-10deg) rotate(60deg) scale(1.05);
-    box-shadow: 0px 0px 20px 10px #c3a46f;
-  }
-  100% {
-    -webkit-transform: rotateX(0deg) rotateY(0deg) rotate(0deg) scale(0.9);
-    box-shadow: 0px 0px 10px 4px #dcb97d;
-  }
-}
-@-moz-keyframes card {
-  0% {
-    -moz-transform: rotateX(60deg) rotateY(-10deg) rotate(60deg) scale(1.05);
-    box-shadow: 0px 0px 20px 10px #c3a46f;
-  }
-  100% {
-    -moz-transform: rotateX(0deg) rotateY(0deg) rotate(0deg) scale(0.9);
-    box-shadow: 0px 0px 10px 4px #dcb97d;
-  }
-}
-@keyframes card {
-  0% {
-    -webkit-transform: rotateX(60deg) rotateY(-10deg) rotate(60deg) scale(1.05);
-    -moz-transform: rotateX(60deg) rotateY(-10deg) rotate(60deg) scale(1.05);
-    -ms-transform: rotateX(60deg) rotateY(-10deg) rotate(60deg) scale(1.05);
-    -o-transform: rotateX(60deg) rotateY(-10deg) rotate(60deg) scale(1.05);
-    transform: rotateX(60deg) rotateY(-10deg) rotate(60deg) scale(1.05);
-    box-shadow: 0px 0px 20px 10px #c3a46f;
-  }
-  100% {
-    -webkit-transform: rotateX(0deg) rotateY(0deg) rotate(0deg) scale(0.9);
-    -moz-transform: rotateX(0deg) rotateY(0deg) rotate(0deg) scale(0.9);
-    -ms-transform: rotateX(0deg) rotateY(0deg) rotate(0deg) scale(0.9);
-    -o-transform: rotateX(0deg) rotateY(0deg) rotate(0deg) scale(0.9);
-    transform: rotateX(0deg) rotateY(0deg) rotate(0deg) scale(0.9);
-    box-shadow: 0px 0px 10px 4px #dcb97d;
-  }
-}
 html, body {
   font-family: 'Roboto', sans-serif;
   
@@ -116,33 +26,58 @@ html, body {
   perspective: 1000px;
   -webkit-animation-fill-mode: forwards;
 }
-html .card, body .card {
+#card {
   height: 105%;
   width: 100%;
   margin: 0 auto;
   border-radius: 10px;
   margin-top: -1em;
   background: #7FADAD;
-  box-shadow: 0px 0px 20px 10px #608566;
   overflow: hidden;
   position: relative;
   -webkit-animation: card 2s ease-in;
-  -moz-animation: card 2s ease-in;
   animation: card 2s ease-in;
   -webkit-animation-fill-mode: forwards;
 }
-html .card .detail, body .card .detail {
+
+/*开头动画keyframes card*/
+
+@-webkit-keyframes card {
+  0% {
+    -webkit-transform: rotateX(60deg) rotateY(-10deg) rotate(60deg) scale(1.05);
+    box-shadow: 0px 0px 20px 10px #c3a46f;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg) rotateY(0deg) rotate(0deg) scale(0.9);
+    box-shadow: 0px 0px 10px 4px #dcb97d;
+  }
+}
+
+@keyframes card {
+  0% {
+    -webkit-transform: rotateX(60deg) rotateY(-10deg) rotate(60deg) scale(1.05);
+
+    transform: rotateX(60deg) rotateY(-10deg) rotate(60deg) scale(1.05);
+    box-shadow: 0px 0px 20px 10px #c3a46f;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg) rotateY(0deg) rotate(0deg) scale(0.9);
+    transform: rotateX(0deg) rotateY(0deg) rotate(0deg) scale(0.9);
+    box-shadow: 0px 0px 10px 4px #dcb97d;
+  }
+}
+
+.detail {
   position: absolute;
   width: 100%;
   height: 22em;
 }
-html .card .detail .circle, body .card .detail .circle {
+.circle{
   position: absolute;
   width: 35em;
   height: 16em;
   bottom: -10em;
   left: 50%;
-  box-shadow: -2px -2px 9px #76a1a1;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -170,27 +105,18 @@ html .card .detail .circle, body .card .detail .circle {
 
 
 }
-html .card .detail .apple-stuff, body .card .detail .apple-stuff {
+/*navbar 导航条 css*/
+.apple-stuff {
   padding: 2% 2%;
   color: white;
   background: #668a8a;
   border-radius: 10px 10px 0px 0px;
 }
-html .card .detail .apple-stuff .time, body .card .detail .apple-stuff .time {
-  display: inline;
-  position: absolute;
-  left: 50%;
-  font-weight: 300;
-  font-size: 0.8em;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
+
 .navbar-title .title{
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 0.9em;
+  letter-spacing: 0.1em;
+  font-weight: 700;
   text-align: center;
   display: block;
   color: #fff;
@@ -214,7 +140,8 @@ html .card .detail .apple-stuff .time, body .card .detail .apple-stuff .time {
   color: #82CF85;
 }
 
-html .card .detail .header, body .card .detail .header {
+/*header css*/
+.header {
   text-align: center;
   color: rgba(255, 255, 255, 0.9);
   margin-top: 2em;
@@ -222,33 +149,25 @@ html .card .detail .header, body .card .detail .header {
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-html .card .detail .header .description, body .card .detail .header .description {
-  font-size: 2em;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  position: relative;
-  margin-top: 2px;
-}
-html .card .detail .header .description i, body .card .detail .header .description i {
-  font-size: 4em;
-  margin-top: 0.3em;
-  text-shadow: 5px 2px 2px yellow;
-}
-html .card .detail .header .city, body .card .detail .header .city {
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  margin-top: 0.5em;
-}
-html .card .detail .header .temp, body .card .detail .header .temp {
-  font-size: 6em;
-  font-weight: 700;
-  margin-top: 0.1em;
-}
-html .card .list, body .card .list {
-  position: absolute;
-  top: 50% ;
+.swiper-container {
+  top: -0.8em;
   width: 100%;
-  height: 55%;
+  height: 11.5em;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 0.6em;
+  background: rgba(127, 173, 173,0.8);
+  display: flex;
+  align-items: center;
+}
+
+/*list css*/
+.list {
+  position: absolute;
+  top: 16.5em ;
+  width: 100%;
+  height: 100%;
   background: #FAF7F5;
   bottom: 0;
   border-radius: 0px 0px 10px 10px;
@@ -263,11 +182,11 @@ html .card .list, body .card .list {
 .sub-title{
   font-size: 0.7em;
   color: #333;
-  font-weight: 400;
+  font-weight: 30;
 }
 .raise-love
 {
-  font-size: 0.8em;
+  font-size: 0.7em;
   border-top: solid 0.1em #333;
   /*border-bottom: solid 0.1em #333;*/
   border-radius: 8px;
@@ -306,60 +225,12 @@ html .card .list, body .card .list {
   display: flex;
   justify-content: center;
   cursor: pointer; 
-  margin-top: 1em;  
+  margin-top: 1em; 
+  font-weight: 700; 
   
 }
 
-html .card .list .weather-form, body .card .list .weather-form {
-  text-align: center;
-  margin-top: 5em;
-}
-html .card .list .weather-form input, body .card .list .weather-form input {
-  border: none;
-  font-weight: 300;
-  text-align: center;
-  position: absolute;
-  left: 50%;
-  width: 100px;
-  background: #FAF7F5;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
-}
-html .card .list .weather-form input:focus, body .card .list .weather-form input:focus {
-  outline: none;
-}
-html .card .list .weather-form button, body .card .list .weather-form button {
-  text-align: center;
-  display: inline-block;
-  padding: 0.4em 1em;
-  font-size: 1em;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  border: none;
-  border-radius: 10px;
-  letter-spacing: 2px;
-  color: rgba(255, 255, 255, 0.9);
-  background: #7FADAD;
-  width: 200px;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  transition: 0.2s;
-}
-html .card .list .weather-form button:hover, body .card .list .weather-form button:hover {
-  background: #6c9393;
-}
-html .card .list .weather-form button:focus, body .card .list .weather-form button:focus {
-  outline: none;
-}
+
 .footer_guide {
   font-size: 1em;
   border-top: solid 1px rgba(119,119,119,0.4);
@@ -376,9 +247,10 @@ html .card .list .weather-form button:focus, body .card .list .weather-form butt
 }
 
 .guide_item {
-  font-size: 0.9em;
+  font-weight: 500;
+  font-size: 0.85em;
   position: relative; 
-  top: 0.40em; 
+  top: 0.6em; 
   height: 2em;
   display: flex;
   flex: 1;
@@ -390,6 +262,14 @@ html .card .list .weather-form button:focus, body .card .list .weather-form butt
   color: #333;
   cursor: pointer;
   
+}
+.guide_item1{
+  font-size: 0.75em;
+  top: 0.75em;
+}
+.guide_item2{
+  font-size: 0.75em;
+  top: 0.75em;
 }
 
 .guide_item3{
