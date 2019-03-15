@@ -7,34 +7,47 @@
 	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
+	<link href="https://fonts.font.im/css?family=Roboto:400,500,700" rel="stylesheet">
 	
-
 
 </head>
 <body>	
 	<div class="card">
-	  <div class="detail">
-	  	<!-- <button type="submit">返回首页</button> -->
+		<!-- 图片页面detail -->
+	  	<div class="detail">
+
+		<!-- 空白圆形circle -->
 	    <div class="circle"></div>
+
+	    <!-- 导航navbar -->
 	    <div class="apple-stuff">
-	    	<div class="window-title">
+	    	<div class="navbar-title">
 		      <div class="dots">
 		        <i class="fa fa-circle"></i>
 		        <i class="fa fa-circle"></i>
 		        <i class="fa fa-circle"></i>
 		      </div>
 		      <span class="title">支付宝公益项目</span>
-		    </div>
-
-	    	<!-- <i class="fa fa-wifi"></i>
-	      <div class="time">12:00 AM</div></i> -->
+		    </div>    	
 	    </div>
 
-	    <div class="weather-forecast">
-	      <!-- <div class="description">公益项目图片 <br> </div> -->
-		  <img src="http://mat1.gtimg.com/gongyi/2013yuejuan/8-wjja/wjja_1_465261.jpg" alt="">
-	      <div class="city"></div>
-	      <div class="temp"></div>
+	    <div class="header">
+	    <button class="raise-status btn btn-danger text-center">募集中</button>	     
+		<!-- 滑动swiper -->
+	      <div class="swiper-container">
+	        <div class="swiper-wrapper">
+	          <div class="swiper-slide"><img src="http://mat1.gtimg.com/gongyi/2013yuejuan/8-wjja/wjja_1_465261.jpg" alt="" ></div>
+	          <div class="swiper-slide"><img src="http://mat1.gtimg.com/gongyi/2013yuejuan/8-wjja/wjja_7_465261.jpg" alt="" ></div>
+	          <div class="swiper-slide"><img src="http://mat1.gtimg.com/gongyi/2013yuejuan/8-wjja/wjja_4.jpg" alt="" ></div>
+	          <div class="swiper-slide"><img src="http://mat1.gtimg.com/gongyi/2013yuejuan/8-wjja/wjja_3.jpg" alt="" ></div>
+	          <div class="swiper-slide"><img src="http://mat1.gtimg.com/gongyi/2013yuejuan/8-wjja/wjja_7_465261.jpg" alt="" ></div>
+	          
+	        </div>
+	        <div class="swiper-pagination"></div>
+	      </div>
+
+		 	    
 	   </div>
 	</div>
 
@@ -53,40 +66,46 @@
 
 			  	
 		  	
-		        <div class="col-6">
+		        <div class="col-6 love1">
 		          <div class="raise-love">
 		            💗爱心募集目标数量
 		               15,000,000
 		          </div>
 		        </div>
 
-		        <div class="col-6">
+		        <div class="col-6 love2">
 		          <div class="raise-love">
 		            💗已募集爱心数量
 		               1,234,825
 		          </div>
 		        </div>
 
-		        <div class="col-12">
+		        <div class="col-12 progress-outside">
 		          <div class="progress">
 					<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" 
-					style="width: 70%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">70%	
+					style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%	
 					</div>
+					<div class="raise-num">01期</div>
+					
+
 				  </div>
 		        </div>
+
+
 		       
 	    		
 
-		        <div class="col-6">
-		          <div class="raise-love">
-		            💗累计献出爱心
+		        <div class="col-6 love3">
+		          <div class="raise-love ">
+
+		            💝累计献出爱心
 		               5600
 		          </div>
 		        </div>
 
-		        <div class="col-6">
+		        <div class="col-6 love4">
 		          <div class="raise-love">
-		            💗为项目贡献
+		            🍱为项目贡献
 		            <br/>
 		               0.14份午餐
 		          </div>
@@ -104,6 +123,46 @@
 	  </div>
 
 	</div>
+	<!-- footerguide 底部向导栏，跳转至其他页面/可组件化 -->
+	<footer class="footer_guide">
+
+	    <div class="guide_item guide_item1" @click="goto('/msite')" :class="{on: isCurrent('/msite')}">
+	    <span class="item_icon">
+	    <i class="iconfont icon-food"></i>
+	    </span>
+	    <span>首页</span>
+	    </div>
+
+	    <div class="guide_item guide_item2" @click="goto('/search')" :class="{on: isCurrent('/search')}">
+	    <span class="item_icon">
+	    <i class="iconfont icon-search"></i>
+	    </span>
+	    <span>一起捐</span>
+	    </div>
+
+	    <a href="#" class="guide_item guide_item3 btn btn-warning btn "  role="button" @click="goto('/order')" :class="{on: isCurrent('/order')}" role="button" aria-pressed="true">单人月捐</a>
+
+	    <a href="#" class="guide_item guide_item4 btn btn-danger btn "  role="button" @click="goto('/order')" :class="{on: isCurrent('/order')}" role="button" aria-pressed="true">单笔捐赠</a>
+
+	    
+   
+	  </footer>	
+
+	
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+
+	<!-- Initialize Swiper -->
+	<script>
+	  var swiper = new Swiper('.swiper-container',{
+	  	loop: true,
+	  	pagination: {
+	      el: '.swiper-pagination',
+
+	    },
+
+	  });
+	</script>	
 
 </body>
 </html>

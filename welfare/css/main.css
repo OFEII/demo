@@ -4,8 +4,11 @@
 }*/
 img
 {
- height: auto; width: auto\9; width:100%; 
+ height: auto; width: auto\9; width:98%;
+ border: solid 0.3em #fff;
+ border-radius: 5px;
 } 
+
 
 html,body{
   box-sizing: border-box;
@@ -14,6 +17,31 @@ html,body{
 *, *::after, *::before {
   box-sizing: inherit;
 }
+.swiper-container {
+  top: -0.8em;
+  width: 100%;
+  height: 11.5em;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: rgba(127, 173, 173,0.8);
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
 
 @-webkit-keyframes container {
   0% {
@@ -78,7 +106,8 @@ html,body{
   }
 }
 html, body {
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
+  
   width: 100%;
   height: 100%;
   margin: 0;
@@ -88,7 +117,7 @@ html, body {
   -webkit-animation-fill-mode: forwards;
 }
 html .card, body .card {
-  height: 100%;
+  height: 105%;
   width: 100%;
   margin: 0 auto;
   border-radius: 10px;
@@ -122,6 +151,25 @@ html .card .detail .circle, body .card .detail .circle {
   border-radius: 50%;
   background: #FAF7F5;
 }
+
+.raise-status{
+  border-bottom-left-radius: 10em;
+  border-top-left-radius: 10em;
+  font-size: 0.8em;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+  position: absolute;
+  display: flex;
+  vertical-align:middle;
+  text-align: center; 
+  right: 0em;
+  top: 5.5em;
+  height: 2em;
+  z-index:999;
+  padding-right: 0.4em;
+
+
+}
 html .card .detail .apple-stuff, body .card .detail .apple-stuff {
   padding: 2% 2%;
   color: white;
@@ -140,7 +188,7 @@ html .card .detail .apple-stuff .time, body .card .detail .apple-stuff .time {
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-.window-title .title{
+.navbar-title .title{
   font-size: 16px;
   font-weight: bold;
   text-align: center;
@@ -148,23 +196,25 @@ html .card .detail .apple-stuff .time, body .card .detail .apple-stuff .time {
   color: #fff;
 }
 
-.window-title .dots{
+.navbar-title .dots{
+  cursor: pointer;
+  
 }
-.window-title .dots i{
+.navbar-title .dots i{
   margin-right: 3px;
   font-size: 14px;
 }
-.window-title .dots i:nth-child(1){
+.navbar-title .dots i:nth-child(1){
   color: #F57E7D;
 }
-.window-title .dots i:nth-child(2){
+.navbar-title .dots i:nth-child(2){
   color: #FFC881;
 }
-.window-title .dots i:nth-child(3){
+.navbar-title .dots i:nth-child(3){
   color: #82CF85;
 }
 
-html .card .detail .weather-forecast, body .card .detail .weather-forecast {
+html .card .detail .header, body .card .detail .header {
   text-align: center;
   color: rgba(255, 255, 255, 0.9);
   margin-top: 2em;
@@ -172,24 +222,24 @@ html .card .detail .weather-forecast, body .card .detail .weather-forecast {
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-html .card .detail .weather-forecast .description, body .card .detail .weather-forecast .description {
+html .card .detail .header .description, body .card .detail .header .description {
   font-size: 2em;
   font-weight: 700;
   letter-spacing: 0.06em;
   position: relative;
   margin-top: 2px;
 }
-html .card .detail .weather-forecast .description i, body .card .detail .weather-forecast .description i {
+html .card .detail .header .description i, body .card .detail .header .description i {
   font-size: 4em;
   margin-top: 0.3em;
   text-shadow: 5px 2px 2px yellow;
 }
-html .card .detail .weather-forecast .city, body .card .detail .weather-forecast .city {
+html .card .detail .header .city, body .card .detail .header .city {
   font-weight: 300;
   letter-spacing: 0.1em;
   margin-top: 0.5em;
 }
-html .card .detail .weather-forecast .temp, body .card .detail .weather-forecast .temp {
+html .card .detail .header .temp, body .card .detail .header .temp {
   font-size: 6em;
   font-weight: 700;
   margin-top: 0.1em;
@@ -213,15 +263,38 @@ html .card .list, body .card .list {
 .sub-title{
   font-size: 0.7em;
   color: #333;
+  font-weight: 400;
 }
 .raise-love
 {
   font-size: 0.8em;
+  border-top: solid 0.1em #333;
+  /*border-bottom: solid 0.1em #333;*/
+  border-radius: 8px;
+  padding: 0.4em;
+  background-color: rgba(220,185,125,0.7); 
+}
+.love1{
+  border-right: solid 1px #333;
+}
+.love3{
+  border-right: solid 1px #333;
+ /* background-color: rgba(220,185,125,0.7); */
+}
+.progress-outside{
+  margin-bottom: 0.5em;
 }
 .progress{
   margin: 1em 0 1em 0;
   height: 1em;
   width: 90%;
+}
+.raise-num{
+  position: absolute;
+  right: 1em;
+  font-weight: 800;
+  bottom: 0.8em;
+
 }
 .myraise{
   width: 100%;
@@ -229,10 +302,11 @@ html .card .list, body .card .list {
   
 }
 .more-love{
+  
   display: flex;
   justify-content: center;
   cursor: pointer; 
-  margin-top: 3em;  
+  margin-top: 1em;  
   
 }
 
@@ -286,3 +360,59 @@ html .card .list .weather-form button:hover, body .card .list .weather-form butt
 html .card .list .weather-form button:focus, body .card .list .weather-form button:focus {
   outline: none;
 }
+.footer_guide {
+  font-size: 1em;
+  border-top: solid 1px rgba(119,119,119,0.4);
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  bottom: -1em;
+  background-color: #fff;
+  width: 100%;
+  height: 50px;
+  display: flex;
+
+}
+
+.guide_item {
+  font-size: 0.9em;
+  position: relative; 
+  top: 0.40em; 
+  height: 2em;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto
+  color: #333;
+  cursor: pointer;
+  
+}
+
+.guide_item3{
+  
+  border-bottom-left-radius: 10em;
+  border-top-left-radius: 10em;
+}
+.guide_item4{
+  border-bottom-right-radius: 10em;
+  border-top-right-radius: 10em;
+  right: 0.2em;
+  font-weight: 400;
+}
+
+/*.guide_item.on {
+  color: #02a774;
+}
+.guide_item.on .span {
+  font-size: 12px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.guide_item.on .iconfont {
+  font-size: 2em;
+}
+*/
