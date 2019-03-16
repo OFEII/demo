@@ -160,6 +160,24 @@ html, body {
   background: rgba(127, 173, 173,0.8);
   display: flex;
   align-items: center;
+  z-index: 100;
+}
+.swiper-h4{
+  background-color: rgba(0,0,0,0.6);
+ filter: none;
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  height: 3em;
+  line-height: 3em;
+  color: #fafafa;
+  position: absolute;
+  margin-right: 0.3em;
+  margin-left: 0.3em;
+  left: 0;
+  bottom: 4px;
+  right: 0;
+  font-weight: 300;
 }
 
 /*list css*/
