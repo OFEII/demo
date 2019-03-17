@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>彩色圆circle</title>
+	<style type="text/css">
+		html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.parent {
+  position: absolute;
+  width: 45vmin;
+  height: 45vmin;
+  padding: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle {
+  position: absolute;
+  width: 45vmin;
+  height: 45vmin;
+  border-radius: 50%;
+  border: 0.4vmin solid #333;
+  animation-name: hue-rot;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+@keyframes hue-rot {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+.circle:nth-of-type(1) {
+  background-color: rgba(255, 77, 0, 0.1);
+  transform: rotate(0deg) translate(22.5vmin) rotate(0deg);
+}
+.circle:nth-of-type(2) {
+  background-color: rgba(255, 153, 0, 0.1);
+  transform: rotate(18deg) translate(22.5vmin) rotate(-18deg);
+}
+.circle:nth-of-type(3) {
+  background-color: rgba(255, 230, 0, 0.1);
+  transform: rotate(36deg) translate(22.5vmin) rotate(-36deg);
+}
+.circle:nth-of-type(4) {
+  background-color: rgba(204, 255, 0, 0.1);
+  transform: rotate(54deg) translate(22.5vmin) rotate(-54deg);
+}
+.circle:nth-of-type(5) {
+  background-color: rgba(128, 255, 0, 0.1);
+  transform: rotate(72deg) translate(22.5vmin) rotate(-72deg);
+}
+.circle:nth-of-type(6) {
+  background-color: rgba(51, 255, 0, 0.1);
+  transform: rotate(90deg) translate(22.5vmin) rotate(-90deg);
+}
+.circle:nth-of-type(7) {
+  background-color: rgba(0, 255, 26, 0.1);
+  transform: rotate(108deg) translate(22.5vmin) rotate(-108deg);
+}
+.circle:nth-of-type(8) {
+  background-color: rgba(0, 255, 102, 0.1);
+  transform: rotate(126deg) translate(22.5vmin) rotate(-126deg);
+}
+.circle:nth-of-type(9) {
+  background-color: rgba(0, 255, 179, 0.1);
+  transform: rotate(144deg) translate(22.5vmin) rotate(-144deg);
+}
+.circle:nth-of-type(10) {
+  background-color: rgba(0, 255, 255, 0.1);
+  transform: rotate(162deg) translate(22.5vmin) rotate(-162deg);
+}
+.circle:nth-of-type(11) {
+  background-color: rgba(0, 179, 255, 0.1);
+  transform: rotate(180deg) translate(22.5vmin) rotate(-180deg);
+}
+.circle:nth-of-type(12) {
+  background-color: rgba(0, 102, 255, 0.1);
+  transform: rotate(198deg) translate(22.5vmin) rotate(-198deg);
+}
+.circle:nth-of-type(13) {
+  background-color: rgba(0, 26, 255, 0.1);
+  transform: rotate(216deg) translate(22.5vmin) rotate(-216deg);
+}
+.circle:nth-of-type(14) {
+  background-color: rgba(51, 0, 255, 0.1);
+  transform: rotate(234deg) translate(22.5vmin) rotate(-234deg);
+}
+.circle:nth-of-type(15) {
+  background-color: rgba(128, 0, 255, 0.1);
+  transform: rotate(252deg) translate(22.5vmin) rotate(-252deg);
+}
+.circle:nth-of-type(16) {
+  background-color: rgba(204, 0, 255, 0.1);
+  transform: rotate(270deg) translate(22.5vmin) rotate(-270deg);
+}
+.circle:nth-of-type(17) {
+  background-color: rgba(255, 0, 230, 0.1);
+  transform: rotate(288deg) translate(22.5vmin) rotate(-288deg);
+}
+.circle:nth-of-type(18) {
+  background-color: rgba(255, 0, 153, 0.1);
+  transform: rotate(306deg) translate(22.5vmin) rotate(-306deg);
+}
+.circle:nth-of-type(19) {
+  background-color: rgba(255, 0, 77, 0.1);
+  transform: rotate(324deg) translate(22.5vmin) rotate(-324deg);
+}
+.circle:nth-of-type(20) {
+  background-color: rgba(255, 0, 0, 0.1);
+  transform: rotate(342deg) translate(22.5vmin) rotate(-342deg);
+}
+
+
+	</style>
+</head>
+<body>
+	<div class='parent'>
+  <div class='circle'></div>
+  <div class='circle'></div>
+  <div class='circle'></div>
+  <div class='circle'></div>
+  <div class='circle'></div>
+  <div class='circle'></div>
+  <div class='circle'></div>
+  <div class='circle'></div>
+  <div class='circle'></div>
+  <div class='circle'></div>
+  <div class='circle'></div>
+  <div class='circle'></div>
+  <div class='circle'></div>
+  <div class='circle'></div>
+  <div class='circle'></div>
+  <div class='circle'></div>
+  <div class='circle'></div>
+  <div class='circle'></div>
+  <div class='circle'></div>
+  <div class='circle'></div>
+</div>
+
+	
+</body>
+</html>
