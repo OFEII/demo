@@ -1,7 +1,7 @@
 ## 😎demo 用于储存平时做的小实例demo
 
 ### 一、welfare 腾讯公益项目适配移动端
-[腾讯公益项目首页](https://ofeii.github.io/demo/welfare){:target=&quot;_blank&quot;}
+[腾讯公益项目首页](https://ofeii.github.io/demo/welfareurl?_blank)
 
 ![img_1](/images/welfare.jpg?v=6.7.0~/h/240)
 
