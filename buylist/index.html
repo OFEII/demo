@@ -1,0 +1,134 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=320,maximum-scale=1.3,user-scalable=no">
+
+
+	<title>Document</title>
+	<style type="text/css">
+		@charset "UTF-8";
+* {
+  position: relative;
+  font-family: "Roboto Condensed", sans-serif;
+  transition-duration: 1s;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  background-color: #689F38;
+}
+
+#buylist {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: solid 4px #212121;
+  background-color: #DCEDC8;
+}
+
+h1 {
+  padding: 20px;
+  margin-top: -20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  text-align: cneter;
+  border-bottom: solid 4px #212121;
+  background-color: #FF5722;
+  color: #FAFAFA;
+  font-weight: 600;
+}
+
+#items_list {
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.buy_item {
+  padding: 8.18px;
+  list-style: none;
+  border: solid 3px #212121;
+  margin-top: 10px;
+  font-weight: 900;
+  background-color: #FAFAFA;
+}
+.buy_item input {
+  width: 70px;
+  border: solid 2px;
+  padding: 2px;
+}
+.buy_item .price {
+  display: inline-block;
+  background-color: #DCEDC8;
+  position: absolute;
+  padding-left: 8px;
+  padding-right: 8px;
+  right: 50px;
+}
+.buy_item .price::before {
+  content: "￥";
+}
+.buy_item .del_btn {
+  display: inline-block;
+  position: absolute;
+  padding: 0px 6px;
+  right: 10px;
+  cursor: pointer;
+}
+.buy_item .del_btn:hover {
+  background-color: #FF5722;
+  color: wihte;
+}
+.buy_item .addbtn {
+  padding: 2px;
+  margin-left: 30 px;
+  cursor: pointer;
+  border: solid 3px #212121;
+}
+.buy_item .addbtn:hover {
+  background-color: #689F38;
+  color: wihte;
+}
+
+.total {
+  background-color: #FF5722;
+  color: #FAFAFA;
+}
+.total .price {
+  background-color: transparent;
+}
+
+	</style>
+</head>
+<body>
+
+
+<div id="buylist">
+  <h1>MYBUY LIST   😛 🐷♪   </h1>
+  <div class="buy_item control_panel">
+    <label>💳product name</label>
+    <input id="input_name" placeholder="name..."/>
+    <label>💰price</label>
+    <input id="input_price" placeholder="price..."/><span class="addbtn">+add</span>
+  </div>
+  <div id="items_list"></div>
+</div>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+	<script type="text/javascript" src="buylist.js">   </script>
+
+
+	
+</body>
+</html>
